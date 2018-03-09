@@ -1,0 +1,38 @@
+
+{
+  "name": "cordova-plugin-ld-video",
+  "version": "1.0.16",
+  "description": "A simple Cordova/Phonegap plugin to capture video and preview background affecting app functionality.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "cordova": {
+    "id": "cordova-plugin-ld-video",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "keywords": [
+    "video",
+    "background",
+    "transparent",
+    "recording",
+    "camera",
+    "cordova",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robertolocal/cordova-plugin-ld-video.git"
+  },
+  "author": "robaraujo",
+  "license": "GPL3",
+  "bugs": {
+    "url": "https://github.com/robertolocal/cordova-plugin-ld-video/issues"
+  },
+  "homepage": "https://github.com/robertolocal/cordova-plugin-ld-video#readme"
+}
