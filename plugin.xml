@@ -24,12 +24,12 @@
 
     <preference name="CAMERA_USAGE_DESCRIPTION" default=" " />
     <config-file target="*-Info.plist" parent="NSCameraUsageDescription">
-      <string>Backgroundvideo cordova plugin</string>
+      <string>Usamos sua camera caso queria gravar seus trajetos</string>
     </config-file>
 
     <preference name="MICROPHONE_USAGE_DESCRIPTION" default=" " />
     <config-file target="*-Info.plist" parent="NSMicrophoneUsageDescription">
-      <string>Backgroundvideo cordova plugin</string>
+      <string>Usamos seu microfone caso queria gravar seus trajetos</string>
     </config-file>
 
     <header-file src="src/ios/backgroundvideo.h" />
