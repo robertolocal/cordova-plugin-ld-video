@@ -31,29 +31,32 @@ public class BackgroundVideo extends CordovaPlugin {
     private static final int START_REQUEST_CODE = 0;
 
     private String FILE_PATH = "";
-    private String FOLDER_NAME = "localdrive/LocalDrive-Videos";
+    private String FOLDER_NAME = "";
     private VideoOverlay videoOverlay;
     private CallbackContext callbackContext;
     private JSONArray requestArgs;
 
     @Override
     public void initialize(CordovaInterface cordova, CordovaWebView webView) {
-        
         super.initialize(cordova, webView);
-        //File folder = new File(cordova.getActivity().getFilesDir().toString() + "/"+FOLDER_NAME);
-        File folder =  new File(Environment.getExternalStorageDirectory() + "/" + FOLDER_NAME);
-        if (!folder.exists()) {
-            folder.mkdir();
-        }
-
-        FILE_PATH = folder.getAbsolutePath()+ "/";
     }
 
 
     @Override
     public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
         this.callbackContext = callbackContext;
-        this.requestArgs = args;
+
+        if (args.length() > 0) {
+          this.requestArgs = args;
+          this.FOLDER_NAME = this.requestArgs.getString(5);
+        }
+
+        File folder =  new File(Environment.getExternalStorageDirectory() + "/" + FOLDER_NAME);
+        if (!folder.exists()) {
+            folder.mkdir();
+        }
+
+        FILE_PATH = folder.getAbsolutePath()+ "/";
 
         try {
             Log.d(TAG, "ACTION: " + action);
