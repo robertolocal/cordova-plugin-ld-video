@@ -30,6 +30,7 @@
     bool shouldRecordAudio = [[command.arguments objectAtIndex:2] boolValue];
     NSString* quality = [command.arguments objectAtIndex:3];
     bool preview = [[command.arguments objectAtIndex:4] boolValue];
+    self.folderName = [command.arguments objectAtIndex:5];
     
     //get rid of the old view (causes issues if the app is resumed)
     self.parentView = nil;
