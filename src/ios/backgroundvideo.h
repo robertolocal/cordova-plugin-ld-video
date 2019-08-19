@@ -18,6 +18,7 @@
 @property NSString *token;
 @property (assign) BOOL isFinished;
 @property NSString *camera;
+@property NSString *folderName;
 
 - (void)start:(CDVInvokedUrlCommand *)command;
 - (void)stop:(CDVInvokedUrlCommand *)command;

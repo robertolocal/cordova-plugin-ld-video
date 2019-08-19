@@ -144,7 +144,7 @@
 {
     NSArray *lib = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *library = [lib objectAtIndex:0];
-    return [NSString stringWithFormat:@"%@/localdrive/LocalDrive-Videos/", library];
+    return [NSString stringWithFormat:@"%@/%@/", library, self.folderName];
 }
 
 -(AVCaptureDevice *)getCamera: (NSString *)camera
